@@ -88,7 +88,7 @@
 
      <!-- res end -->
      <!-- start tsc -->
-     <source-file src="swt/tsc/src/web/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/web/widget"/>
+     <source-file src="swt/tsc/src/swt/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/swt/widget"/>
      <!-- tsc end -->
 
   </platform>
