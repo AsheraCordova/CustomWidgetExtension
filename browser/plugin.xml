@@ -28,7 +28,7 @@
 
      <!-- res end -->
      <!-- start tsc -->
-     <source-file src="tsc/src/swt/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/swt/widget"/>
+     <source-file src="tsc/src/web/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/web/widget"/>
      <!-- tsc end -->
   </platform>
 
