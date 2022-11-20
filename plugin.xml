@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.customwidgetextension"
+        version="1.0.0">
+
+  <name>CordovaCustomWidgetExtension Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaCustomWidgetExtension">
+        <param name="android-package" value="com.ashera.customwidgetextension.CordovaCustomWidgetExtension"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/ashera/customwidgetextension/CordovaCustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="android/src/com/ashera/customwidgetextension/CustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="android/src/com/ashera/customwidgetextension/CustomWidgetExtensionViewImpl.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="android/tsc/src/android/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaCustomWidgetExtension">
+        	<param name="ios-package" value="CordovaCustomWidgetExtension" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/CordovaCustomWidgetExtension.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/ios/src/CordovaCustomWidgetExtension.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CustomWidgetExtension.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/ios/src/CustomWidgetExtension.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CustomWidgetExtensionViewImpl.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/ios/src/CustomWidgetExtensionViewImpl.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="ios/tsc/src/ios/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CordovaCustomWidgetExtension">
+        <param name="android-package" value="com.ashera.customwidgetextension.CordovaCustomWidgetExtension"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	
+   	 <!-- start src -->
+     <source-file src="browser/src/main/java/com/ashera/customwidgetextension/CordovaCustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="browser/src/main/java/com/ashera/customwidgetextension/CustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="browser/src/main/java/com/ashera/customwidgetextension/CustomWidgetExtensionViewImpl.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="browser/tsc/src/swt/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/swt/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaCustomWidgetExtension">
+        <param name="android-package" value="com.ashera.customwidgetextension.CordovaCustomWidgetExtension"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="swt/src/main/java/com/ashera/customwidgetextension/CordovaCustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="swt/src/main/java/com/ashera/customwidgetextension/CustomWidgetExtension.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <source-file src="swt/src/main/java/com/ashera/customwidgetextension/CustomWidgetExtensionViewImpl.java" target-dir="src/com/ashera/customwidgetextension"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="swt/tsc/src/web/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/web/widget"/>
+     <!-- tsc end -->
+
+  </platform>
+
+
+
+
+
+</plugin>

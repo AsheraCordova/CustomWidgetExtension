@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.customwidgetextension.ios"
+        version="1.0.0">
+
+  <name>CordovaCustomWidgetExtension Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaCustomWidgetExtension">
+        	<param name="ios-package" value="CordovaCustomWidgetExtension" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/src/CordovaCustomWidgetExtension.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/src/CordovaCustomWidgetExtension.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CustomWidgetExtension.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/src/CustomWidgetExtension.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CustomWidgetExtensionViewImpl.h" target-dir="CustomWidgetExtension/ios/src"/>
+     <source-file src="ios/src/CustomWidgetExtensionViewImpl.m" target-dir="CustomWidgetExtension/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/ios/widget/CustomWidgetExtensionViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  
+
+
+</plugin>
