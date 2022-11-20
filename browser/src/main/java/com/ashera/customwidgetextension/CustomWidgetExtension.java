@@ -6,6 +6,6 @@ public class CustomWidgetExtension  {
     public static void initPlugin() {
     	//start - body
     	//end - body
-    	WidgetFactory.registerAttributableFor("view", new CustomWidgetExtensionViewImpl());
+    	WidgetFactory.registerAttributableFor("View", new CustomWidgetExtensionViewImpl());
     }
 }
