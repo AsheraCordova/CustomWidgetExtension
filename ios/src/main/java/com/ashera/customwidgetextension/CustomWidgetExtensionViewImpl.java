@@ -9,8 +9,8 @@ import r.android.annotation.SuppressLint;
 import r.android.annotation.SuppressLint;
 
 import com.ashera.widget.*;
-import com.ashera.widget.bus.Event.StandardEvents;
 import com.ashera.converter.*;
+
 /*-[
 #include <UIKit/UIKit.h>
 #include "ASUIView.h"
@@ -20,6 +20,7 @@ import androidx.core.view.*;
 
 import static com.ashera.widget.IWidget.*;
 //end - imports
+import com.ashera.widget.bus.Event.StandardEvents;
 public class CustomWidgetExtensionViewImpl implements com.ashera.widget.IAttributable {
 	// start - body
 	public final static String LOCAL_NAME = "CustomWidgetExtensionView"; 
