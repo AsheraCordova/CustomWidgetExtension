@@ -250,7 +250,11 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnLongClickWithNSString:(NSString *)arg0;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnSwipedWithNSString:(NSString *)arg0;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnTouchWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOutsideTouchableWithBoolean:(jboolean)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setRotationWithFloat:(jfloat)arg0;
 
