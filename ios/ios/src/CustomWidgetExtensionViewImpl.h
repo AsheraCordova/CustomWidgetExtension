@@ -96,6 +96,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (instancetype)initWithASCustomWidgetExtensionViewImpl:(ASCustomWidgetExtensionViewImpl *)outer$;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)animatorXmlWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)endAnimator;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)executeWithBoolean:(jboolean)setter;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)invalidate;
@@ -131,6 +135,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setCustomErrorMessageValuesWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setDuplicateParentStateWithBoolean:(jboolean)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setElevationWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setEnabledWithBoolean:(jboolean)arg0;
 
@@ -242,6 +248,14 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setModelUiToPojoWithNSString:(NSString *)arg0;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnAnimationCancelWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnAnimationEndWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnAnimationRepeatWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnAnimationStartWithNSString:(NSString *)arg0;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnClickWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOnDragWithNSString:(NSString *)arg0;
@@ -305,6 +319,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setVisibilityWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setZIndexWithInt:(jint)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)startAnimator;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetAlpha;
 
