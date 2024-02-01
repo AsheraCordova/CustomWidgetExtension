@@ -126,6 +126,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setBackgroundWithNSString:(NSString *)arg0;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setBottomWithNSString:(NSString *)arg0;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setClickableWithBoolean:(jboolean)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setContentDescriptionWithNSString:(NSString *)arg0;
@@ -224,6 +226,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setLayoutDirectionWithNSString:(NSString *)arg0;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setLeftWithNSString:(NSString *)arg0;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setLinearGradientBackgroundWithNSString:(NSString *)value;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setLongClickableWithBoolean:(jboolean)arg0;
@@ -270,6 +274,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setOutsideTouchableWithBoolean:(jboolean)arg0;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setRightWithNSString:(NSString *)arg0;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setRotationWithFloat:(jfloat)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setRotationXWithFloat:(jfloat)arg0;
@@ -287,6 +293,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setTextAlignmentWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setTextDirectionWithNSString:(NSString *)arg0;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setTopWithNSString:(NSString *)arg0;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setTransformPivotXWithNSString:(NSString *)arg0;
 
@@ -329,6 +337,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetBackgroundTint;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetBackgroundTintMode;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetBottom;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetClickable;
 
@@ -410,6 +420,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetLayoutDirection;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetLeft;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetLongClickable;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetMaxHeight;
@@ -428,6 +440,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetModelUiToPojo;
 
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetRight;
+
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetRotation;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetRotationX;
@@ -443,6 +457,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetTextAlignment;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetTextDirection;
+
+- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetTop;
 
 - (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)tryGetTransformPivotX;
 
