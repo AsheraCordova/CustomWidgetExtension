@@ -15,25 +15,17 @@
 #include "IWidget.h"
 #include "J2ObjC_source.h"
 #include "View.h"
-#include "ViewImpl.h"
 #include "WidgetAttribute.h"
 #include "WidgetFactory.h"
-#include "java/lang/Boolean.h"
-#include "java/lang/Integer.h"
 #include "java/util/List.h"
-#include "java/util/Map.h"
 
 #include <UIKit/UIKit.h>
 #include "ASUIView.h"
 
 
-#pragma clang diagnostic ignored "-Wincomplete-implementation"
-
 @interface ASCustomWidgetExtensionViewImpl () {
  @public
   id<ASIWidget> w_;
-  ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *builder_;
-  ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *bean_;
   ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler *postMeasureEventHandler_;
 }
 
@@ -45,8 +37,6 @@
 @end
 
 J2OBJC_FIELD_SETTER(ASCustomWidgetExtensionViewImpl, w_, id<ASIWidget>)
-J2OBJC_FIELD_SETTER(ASCustomWidgetExtensionViewImpl, builder_, ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)
-J2OBJC_FIELD_SETTER(ASCustomWidgetExtensionViewImpl, bean_, ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *)
 J2OBJC_FIELD_SETTER(ASCustomWidgetExtensionViewImpl, postMeasureEventHandler_, ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler *)
 
 __attribute__((unused)) static void ASCustomWidgetExtensionViewImpl_initWithASIWidget_(ASCustomWidgetExtensionViewImpl *self, id<ASIWidget> widget);
@@ -56,20 +46,6 @@ __attribute__((unused)) static ASCustomWidgetExtensionViewImpl *new_ASCustomWidg
 __attribute__((unused)) static ASCustomWidgetExtensionViewImpl *create_ASCustomWidgetExtensionViewImpl_initWithASIWidget_(id<ASIWidget> widget);
 
 __attribute__((unused)) static void ASCustomWidgetExtensionViewImpl_setLinearGradientBackgroundWithASIWidget_withId_(ASCustomWidgetExtensionViewImpl *self, id<ASIWidget> w, id objValue);
-
-@interface ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder () {
- @public
-  ASCustomWidgetExtensionViewImpl *this$0_;
-}
-
-@end
-
-@interface ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean () {
- @public
-  ASCustomWidgetExtensionViewImpl *this$0_;
-}
-
-@end
 
 @interface ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler () {
  @public
@@ -135,20 +111,6 @@ J2OBJC_IGNORE_DESIGNATED_END
   return nil;
 }
 
-- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *)getBean {
-  if (bean_ == nil) {
-    bean_ = new_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean_initWithASCustomWidgetExtensionViewImpl_(self);
-  }
-  return bean_;
-}
-
-- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)getBuilder {
-  if (builder_ == nil) {
-    builder_ = new_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder_initWithASCustomWidgetExtensionViewImpl_(self);
-  }
-  return builder_;
-}
-
 - (void)setLinearGradientBackgroundWithASIWidget:(id<ASIWidget>)w
                                           withId:(id)objValue {
   ASCustomWidgetExtensionViewImpl_setLinearGradientBackgroundWithASIWidget_withId_(self, w, objValue);
@@ -173,8 +135,6 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 6, 7, -1, -1, -1, -1 },
-    { NULL, "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 8, 9, -1, -1, -1, -1 },
     { NULL, "V", 0x109, 10, 11, -1, -1, -1, -1 },
     { NULL, "V", 0x109, 12, 13, -1, -1, -1, -1 },
@@ -189,21 +149,17 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[4].selector = @selector(loadAttributesWithNSString:);
   methods[5].selector = @selector(setAttributeWithASWidgetAttribute:withNSString:withId:withASILifeCycleDecorator:);
   methods[6].selector = @selector(getAttributeWithASWidgetAttribute:withASILifeCycleDecorator:);
-  methods[7].selector = @selector(getBean);
-  methods[8].selector = @selector(getBuilder);
-  methods[9].selector = @selector(setLinearGradientBackgroundWithASIWidget:withId:);
-  methods[10].selector = @selector(nativeSetFrameForCAGradientLayerWithId:);
-  methods[11].selector = @selector(nativeSetLinearGradientBackgroundWithId:withId:withId:);
+  methods[7].selector = @selector(setLinearGradientBackgroundWithASIWidget:withId:);
+  methods[8].selector = @selector(nativeSetFrameForCAGradientLayerWithId:);
+  methods[9].selector = @selector(nativeSetLinearGradientBackgroundWithId:withId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "LOCAL_NAME", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 14, -1, -1 },
     { "w_", "LASIWidget;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "builder_", "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "bean_", "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "postMeasureEventHandler_", "LASCustomWidgetExtensionViewImpl_PostMeasureEventHandler;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LASIWidget;", "newInstance", "loadAttributes", "LNSString;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;LASILifeCycleDecorator;", "getAttribute", "LASWidgetAttribute;LASILifeCycleDecorator;", "setLinearGradientBackground", "LASIWidget;LNSObject;", "nativeSetFrameForCAGradientLayer", "LNSObject;", "nativeSetLinearGradientBackground", "LNSObject;LNSObject;LNSObject;", &ASCustomWidgetExtensionViewImpl_LOCAL_NAME, "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean;LASCustomWidgetExtensionViewImpl_PostMeasureEventHandler;" };
-  static const J2ObjcClassInfo _ASCustomWidgetExtensionViewImpl = { "CustomWidgetExtensionViewImpl", "com.ashera.customwidgetextension", ptrTable, methods, fields, 7, 0x1, 12, 5, -1, 15, -1, -1, -1 };
+  static const void *ptrTable[] = { "LASIWidget;", "newInstance", "loadAttributes", "LNSString;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;LASILifeCycleDecorator;", "getAttribute", "LASWidgetAttribute;LASILifeCycleDecorator;", "setLinearGradientBackground", "LASIWidget;LNSObject;", "nativeSetFrameForCAGradientLayer", "LNSObject;", "nativeSetLinearGradientBackground", "LNSObject;LNSObject;LNSObject;", &ASCustomWidgetExtensionViewImpl_LOCAL_NAME, "LASCustomWidgetExtensionViewImpl_PostMeasureEventHandler;" };
+  static const J2ObjcClassInfo _ASCustomWidgetExtensionViewImpl = { "CustomWidgetExtensionViewImpl", "com.ashera.customwidgetextension", ptrTable, methods, fields, 7, 0x1, 10, 3, -1, 15, -1, -1, -1 };
   return &_ASCustomWidgetExtensionViewImpl;
 }
 
@@ -269,116 +225,6 @@ void ASCustomWidgetExtensionViewImpl_nativeSetLinearGradientBackgroundWithId_wit
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASCustomWidgetExtensionViewImpl)
-
-@implementation ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder
-
-- (instancetype)initWithASCustomWidgetExtensionViewImpl:(ASCustomWidgetExtensionViewImpl *)outer$ {
-  ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder_initWithASCustomWidgetExtensionViewImpl_(self, outer$);
-  return self;
-}
-
-- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)executeWithBoolean:(jboolean)setter {
-  if (setter) {
-    [((id<ASIWidget>) nil_chk(this$0_->w_)) executeCommandWithJavaUtilMap:command_ withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_SETTER_METHOD];
-    [((id<ASIFragment>) nil_chk([((id<ASIWidget>) nil_chk(this$0_->w_)) getFragment])) remeasure];
-  }
-  [((id<ASIWidget>) nil_chk(this$0_->w_)) executeCommandWithJavaUtilMap:command_ withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_GETTER_METHOD];
-  return self;
-}
-
-- (ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *)setLinearGradientBackgroundWithNSString:(NSString *)value {
-  id<JavaUtilMap> attrs = [self initCommandWithNSString:@"linearGradientBackground"];
-  (void) [((id<JavaUtilMap>) nil_chk(attrs)) putWithId:@"type" withId:@"attribute"];
-  (void) [attrs putWithId:@"setter" withId:JavaLangBoolean_valueOfWithBoolean_(true)];
-  (void) [attrs putWithId:@"orderSet" withId:JavaLangInteger_valueOfWithInt_(++orderSet_)];
-  (void) [attrs putWithId:@"value" withId:value];
-  return self;
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;", 0x1, 1, 2, -1, -1, -1, -1 },
-    { NULL, "LASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;", 0x1, 3, 4, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASCustomWidgetExtensionViewImpl:);
-  methods[1].selector = @selector(executeWithBoolean:);
-  methods[2].selector = @selector(setLinearGradientBackgroundWithNSString:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LASCustomWidgetExtensionViewImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LASCustomWidgetExtensionViewImpl;", "execute", "Z", "setLinearGradientBackground", "LNSString;", "Lcom/ashera/layout/ViewImpl$ViewCommandBuilder<Lcom/ashera/customwidgetextension/CustomWidgetExtensionViewImpl$CustomWidgetExtensionViewCommandBuilder;>;" };
-  static const J2ObjcClassInfo _ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder = { "CustomWidgetExtensionViewCommandBuilder", "com.ashera.customwidgetextension", ptrTable, methods, fields, 7, 0x1, 3, 1, 0, -1, -1, 5, -1 };
-  return &_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder;
-}
-
-@end
-
-void ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *self, ASCustomWidgetExtensionViewImpl *outer$) {
-  self->this$0_ = outer$;
-  ASViewImpl_ViewCommandBuilder_init(self);
-}
-
-ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *new_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder, initWithASCustomWidgetExtensionViewImpl_, outer$)
-}
-
-ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *create_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder, initWithASCustomWidgetExtensionViewImpl_, outer$)
-}
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder)
-
-@implementation ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean
-
-- (instancetype)initWithASCustomWidgetExtensionViewImpl:(ASCustomWidgetExtensionViewImpl *)outer$ {
-  ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean_initWithASCustomWidgetExtensionViewImpl_(self, outer$);
-  return self;
-}
-
-- (void)setLinearGradientBackgroundWithNSString:(NSString *)value {
-  (void) [((ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *) nil_chk([((ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *) nil_chk([((ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewCommandBuilder *) nil_chk([this$0_ getBuilder])) reset])) setLinearGradientBackgroundWithNSString:value])) executeWithBoolean:true];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASCustomWidgetExtensionViewImpl:);
-  methods[1].selector = @selector(setLinearGradientBackgroundWithNSString:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LASCustomWidgetExtensionViewImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LASCustomWidgetExtensionViewImpl;", "setLinearGradientBackground", "LNSString;" };
-  static const J2ObjcClassInfo _ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean = { "CustomWidgetExtensionViewBean", "com.ashera.customwidgetextension", ptrTable, methods, fields, 7, 0x1, 2, 1, 0, -1, -1, -1, -1 };
-  return &_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean;
-}
-
-@end
-
-void ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *self, ASCustomWidgetExtensionViewImpl *outer$) {
-  self->this$0_ = outer$;
-  ASViewImpl_ViewBean_initWithASIWidget_(self, outer$->w_);
-}
-
-ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *new_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean, initWithASCustomWidgetExtensionViewImpl_, outer$)
-}
-
-ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean *create_ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean_initWithASCustomWidgetExtensionViewImpl_(ASCustomWidgetExtensionViewImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean, initWithASCustomWidgetExtensionViewImpl_, outer$)
-}
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASCustomWidgetExtensionViewImpl_CustomWidgetExtensionViewBean)
 
 @implementation ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler
 

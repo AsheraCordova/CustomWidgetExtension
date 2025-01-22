@@ -79,55 +79,6 @@ public class CustomWidgetExtensionViewImpl implements com.ashera.widget.IAttribu
 	
 	
 
-	
-private CustomWidgetExtensionViewCommandBuilder builder;
-private CustomWidgetExtensionViewBean bean;
-public CustomWidgetExtensionViewBean getBean() {
-	if (bean == null) {
-		bean = new CustomWidgetExtensionViewBean();
-	}
-	return bean;
-}
-public CustomWidgetExtensionViewCommandBuilder getBuilder() {
-	if (builder == null) {
-		builder = new CustomWidgetExtensionViewCommandBuilder();
-	}
-	return builder;
-}
-
-
-public  class CustomWidgetExtensionViewCommandBuilder extends com.ashera.layout.ViewImpl.ViewCommandBuilder <CustomWidgetExtensionViewCommandBuilder> {
-    public CustomWidgetExtensionViewCommandBuilder() {
-	}
-	
-	public CustomWidgetExtensionViewCommandBuilder execute(boolean setter) {
-		if (setter) {
-			w.executeCommand(command, null, IWidget.COMMAND_EXEC_SETTER_METHOD);
-			w.getFragment().remeasure();
-		}
-		w.executeCommand(command, null, IWidget.COMMAND_EXEC_GETTER_METHOD);
-return this;	}
-
-public CustomWidgetExtensionViewCommandBuilder setLinearGradientBackground(String value) {
-	Map<String, Object> attrs = initCommand("linearGradientBackground");
-	attrs.put("type", "attribute");
-	attrs.put("setter", true);
-	attrs.put("orderSet", ++orderSet);
-
-	attrs.put("value", value);
-return this;}
-}
-public class CustomWidgetExtensionViewBean extends com.ashera.layout.ViewImpl.ViewBean{
-		public CustomWidgetExtensionViewBean() {
-			super(CustomWidgetExtensionViewImpl.this.w);
-		}
-public void setLinearGradientBackground(String value) {
-	getBuilder().reset().setLinearGradientBackground(value).execute(true);
-}
-
-}
-
-
 	// end - body
 
 
