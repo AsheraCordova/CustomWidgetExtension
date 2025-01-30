@@ -6,7 +6,7 @@ The following functionality can be extended :
 * Widget
 * Attribute for widget
 
-The plugin can be cloned and used as starting point for developing custom crossplatform code which varies for different platforms. The template consists of an exmaple pf adding new attribute "linearGradient" to all views.
+The plugin can be cloned and used as starting point for developing custom crossplatform code which varies for different platforms. The template consists of an example of adding new attribute "linearGradient" to all views.
 
 ## Installation
 To install the plugin use:
