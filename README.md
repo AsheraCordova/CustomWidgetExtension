@@ -1,6 +1,6 @@
 # CustomWidgetExtension
 
-Project which adds support for adding cross platform functionality which is different for different platform. 
+Project which adds support for adding cross platform functionality which varies accross different platform. 
 
 The following functionality can be extended :
 * Widget
