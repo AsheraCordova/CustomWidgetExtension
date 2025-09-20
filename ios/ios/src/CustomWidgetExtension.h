@@ -3,6 +3,7 @@
 //  source: D:\Java\git\core-ios-widgets\IOSCustomWidgetExtension\src\main\java\com\ashera\customwidgetextension\CustomWidgetExtension.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_CustomWidgetExtension")
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT void ASCustomWidgetExtension_initPlugin(void);
 J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtension)
 
 @compatibility_alias ComAsheraCustomwidgetextensionCustomWidgetExtension ASCustomWidgetExtension;
+
 
 #endif
 

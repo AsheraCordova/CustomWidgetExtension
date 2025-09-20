@@ -3,6 +3,7 @@
 //  source: D:\Java\git\core-ios-widgets\IOSCustomWidgetExtension\src\main\java\com\ashera\customwidgetextension\CustomWidgetExtensionViewImpl.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_CustomWidgetExtensionViewImpl")
@@ -21,6 +22,7 @@
 #include "IAttributable.h"
 
 @class ASWidgetAttribute;
+@class NSString;
 @protocol ASILifeCycleDecorator;
 @protocol ASIWidget;
 
@@ -73,6 +75,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 
 @compatibility_alias ComAsheraCustomwidgetextensionCustomWidgetExtensionViewImpl ASCustomWidgetExtensionViewImpl;
 
+
 #endif
 
 #if !defined (ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler_) && (INCLUDE_ALL_CustomWidgetExtensionViewImpl || defined(INCLUDE_ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler))
@@ -82,6 +85,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl)
 #define INCLUDE_ASEventBusHandler 1
 #include "EventBusHandler.h"
 
+@class NSString;
 @protocol ASIWidget;
 
 @interface ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler : ASEventBusHandler
@@ -110,6 +114,7 @@ FOUNDATION_EXPORT ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler *new_A
 FOUNDATION_EXPORT ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler *create_ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler_initWithNSString_withASIWidget_(NSString *type, id<ASIWidget> widget);
 
 J2OBJC_TYPE_LITERAL_HEADER(ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler)
+
 
 #endif
 

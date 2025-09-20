@@ -3,10 +3,21 @@
 //  source: D:\Java\git\core-ios-widgets\IOSCustomWidgetExtension\src\main\java\com\ashera\customwidgetextension\CustomWidgetExtension.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "CustomWidgetExtension.h"
 #include "CustomWidgetExtensionViewImpl.h"
 #include "J2ObjC_source.h"
 #include "WidgetFactory.h"
+
+
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @implementation ASCustomWidgetExtension
@@ -57,3 +68,5 @@ void ASCustomWidgetExtension_initPlugin() {
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASCustomWidgetExtension)
+
+J2OBJC_NAME_MAPPING(ASCustomWidgetExtension, "com.ashera.customwidgetextension", "AS")

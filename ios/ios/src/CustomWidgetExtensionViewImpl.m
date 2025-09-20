@@ -3,6 +3,11 @@
 //  source: D:\Java\git\core-ios-widgets\IOSCustomWidgetExtension\src\main\java\com\ashera\customwidgetextension\CustomWidgetExtensionViewImpl.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "CustomWidgetExtensionViewImpl.h"
 #include "Event.h"
 #include "EventBus.h"
@@ -17,10 +22,17 @@
 #include "View.h"
 #include "WidgetAttribute.h"
 #include "WidgetFactory.h"
+#include "java/lang/Integer.h"
 #include "java/util/List.h"
 
 #include <UIKit/UIKit.h>
 #include "ASUIView.h"
+
+
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @interface ASCustomWidgetExtensionViewImpl () {
@@ -225,6 +237,8 @@ void ASCustomWidgetExtensionViewImpl_nativeSetLinearGradientBackgroundWithId_wit
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASCustomWidgetExtensionViewImpl)
+
+J2OBJC_NAME_MAPPING(ASCustomWidgetExtensionViewImpl, "com.ashera.customwidgetextension", "AS")
 
 @implementation ASCustomWidgetExtensionViewImpl_PostMeasureEventHandler
 
