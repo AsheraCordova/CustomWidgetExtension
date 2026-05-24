@@ -40,6 +40,7 @@ public class CustomWidgetExtensionViewImpl implements com.ashera.widget.IAttribu
 	// start - body
 	public final static String LOCAL_NAME = "CustomWidgetExtensionView"; 
 	private IWidget w;
+	
 	private CustomWidgetExtensionViewImpl(IWidget widget) {
 		this.w = widget;
 	}
